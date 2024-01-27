@@ -1,6 +1,6 @@
 import React from 'react'
 import './card.css'
-import { FaFacebook, FaGithub,  FaLinkedin } from "react-icons/fa";
+import { FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
 
 const Card = ({ photoURL, name, area, fb, gh, lk }) => {
     return (

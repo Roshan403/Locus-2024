@@ -3,9 +3,8 @@ import Header from './component/Header';
 import Hero from './component/Hero';
 import Team from './pages/Team'
 import Pulchowk from './pages/Pulchowk'
-import { BrowserRouter, Outlet, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Error from './pages/404';
-
 function App() {
   return (
     <>
@@ -15,7 +14,7 @@ function App() {
           <Route path="/" element={<Hero />} />
           <Route path="/team" element={<Team />} />
           <Route path="/pulchowk" element={<Pulchowk />} />
-          <Route path="/404" element={<Error/>} />
+          <Route path="/404" element={<Error />} />
         </Routes>
 
       </BrowserRouter>

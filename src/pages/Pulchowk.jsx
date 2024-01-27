@@ -1,4 +1,4 @@
-import React, { useEffect, useState,useRef} from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import { Chart as ChartJs, defaults } from 'chart.js/auto'
 import { Bar, Line } from "react-chartjs-2"
 import "./pulchowk.css"
@@ -89,14 +89,14 @@ const Pulchowk = () => {
         progressCircle.current.style.setProperty('--progress', 1 - progress);
         progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
     };
-
+    console.log(chartData)
     return (
         <>
             {chartData && chartData.feeds ? (<>
 
                 <div className="chart">
                     <Swiper
-                    grabCursor={true}
+                        grabCursor={true}
                         spaceBetween={30}
                         centeredSlides={true}
                         slidesPerView='2'
@@ -112,7 +112,7 @@ const Pulchowk = () => {
                         onAutoplayTimeLeft={onAutoplayTimeLeft}
                         className='swiper'
                     >
-                        
+
                         <SwiperSlide className='mySwiper'>
                             <div className="lineT">
 

@@ -1,10 +1,11 @@
-import React,{useRef} from 'react'
+import React, { useRef } from 'react'
 import Card from '../component/Card'
 import "./team.css"
 import cr7 from '../assests/cr7.jpg'
 import sagar from "../assests/team/sagar.png"
 import roshan from "../assests/team/roshan.jpg"
 import shishir from "../assests/team/shishir.png"
+import bibhav from "../assests/team/download.jpg"
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -26,6 +27,7 @@ const Team = () => {
         progressCircle.current.style.setProperty('--progress', 1 - progress);
         progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
     };
+
     return (
         <div className='team-section'>
             <h2>Meet our Team : </h2>
@@ -36,7 +38,7 @@ const Team = () => {
                     centeredSlides={true}
                     slidesPerView='3'
                     autoplay={{
-                        delay: 2000,
+                        delay: 1000,
                         disableOnInteraction: true,
                     }}
                     coverflowEffect={{
@@ -51,29 +53,28 @@ const Team = () => {
                 >
                     <SwiperSlide>
 
-                        <Card fb="https://www.facebook.com/dragonlord1129" lk="https://www.linkedin.com/in/bibhav-jha-9a84b8210/?fbclid=IwAR2QfKTfpNDRlbDsa8XIBHuBzRkEHFW-ZfyQ7HoGpalVsSMKNbp2cLyoE08" name="Bibhav Jha" area="FrontEnd" description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum explicabo ipsa nulla quibusdam id iste nam, aliquam non animi accusamus minima est optio tempore ipsum aperiam vero omnis tenetur impedit velit corrupti." photoURL="https://scontent.fsif1-1.fna.fbcdn.net/v/t39.30808…ETkX14O6zrhjdA7_TnreBFXf71x_x15htSZ9w&oe=65B9169F" />
+                        <Card photoURL={bibhav} fb="https://www.facebook.com/dragonlord1129" lk="https://www.linkedin.com/in/bibhav-jha-9a84b8210/?fbclid=IwAR2QfKTfpNDRlbDsa8XIBHuBzRkEHFW-ZfyQ7HoGpalVsSMKNbp2cLyoE08" name="Bibhav Jha" area="Hardware" />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <Card gh="https://github.com/SagarEGme" lk="https://www.linkedin.com/in/sagar-regmi-5037991a5/" fb="https://www.facebook.com/sagar07regmi/" name="Sagar Regmi" area="FrontEnd" description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur fugiat, sapiente iure a error adipisci nihil repellat aliquid minus voluptate deserunt nam dolore temporibus accusamus culpa iste fugit praesentium! Ipsa, minima corrupti.
-" photoURL={sagar} />
+                        <Card gh="https://github.com/SagarEGme" lk="https://www.linkedin.com/in/sagar-regmi-5037991a5/" fb="https://www.facebook.com/sagar07regmi/" name="Sagar Regmi" area="FrontEnd" photoURL={sagar} />
 
                     </SwiperSlide>
                     <SwiperSlide>
 
-                        <Card gh="https://github.com/Roshan403" fb="https://www.facebook.com/pro le.php?id=100056938837090" lk="https://www.linkedin.com/in/roshan-sharma-4a6729295/" name="Roshan Sharma" area="FrontEnd" description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur fugiat, sapiente iure a error adipisci nihil repellat aliquid minus voluptate deserunt nam dolore temporibus accusamus culpa iste fugit praesentium! Ipsa, minima corrupti.
+                        <Card gh="https://github.com/Roshan403" fb="https://www.facebook.com/pro le.php?id=100056938837090" lk="https://www.linkedin.com/in/roshan-sharma-4a6729295/" name="Roshan Sharma" area="Communication" description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur fugiat, sapiente iure a error adipisci nihil repellat aliquid minus voluptate deserunt nam dolore temporibus accusamus culpa iste fugit praesentium! Ipsa, minima corrupti.
 " photoURL={roshan} />
                     </SwiperSlide>
                     <SwiperSlide>
 
-                        <Card lk="https://www.linkedin.com/in/the-laughing-tree-93b454274/" fb="https://www.facebook.com/shishir.dahal.18/" name="Shishir Dahal" area="FrontEnd" description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur fugiat, sapiente iure a error adipisci nihil repellat aliquid minus voluptate deserunt nam dolore temporibus accusamus culpa iste fugit praesentium! Ipsa, minima corrupti.
-" photoURL={shishir} />
+                        <Card lk="https://www.linkedin.com/in/the-laughing-tree-93b454274/" fb="https://www.facebook.com/shishir.dahal.18/" name="Shishir Dahal" area="Hardware"
+                            photoURL={shishir} />
                     </SwiperSlide>
                     <div className="autoplay-progress" slot="container-end">
-                            <svg viewBox="0 0 48 48" ref={progressCircle}>
-                                <circle cx="24" cy="24" r="20" ></circle>
-                            </svg>
-                            <span ref={progressContent}></span>
-                        </div>
+                        <svg viewBox="0 0 48 48" ref={progressCircle}>
+                            <circle cx="24" cy="24" r="20" ></circle>
+                        </svg>
+                        <span ref={progressContent}></span>
+                    </div>
 
                 </Swiper>
             </div>
